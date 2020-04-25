@@ -1,0 +1,12 @@
+#! /bin/bash
+set -e
+
+LD_LIBRARY_PATH=${APPDIR}/lib:${APPDIR}/lib/mixxx:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH
+
+
+ls -lah /usr/share/mixxx || cp -r ${APPDIR}/share/mixxx /usr/share/
+
+cd ${HOME}
+
+exec ${APPDIR}/mixxx/mixxx $@
