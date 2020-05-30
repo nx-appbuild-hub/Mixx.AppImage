@@ -35,6 +35,8 @@ all:
 	wget --continue https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/l/libchromaprint-1.4.2-6.el8.x86_64.rpm
 	rpm2cpio libchromaprint-1.4.2-6.el8.x86_64.rpm | cpio -idmv
 	
+	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/r/rubberband-1.8.1-8.el7.x86_64.rpm
+	rpm2cpio rubberband-1.8.1-8.el7.x86_64.rpm | cpio -idmv	
 	
 	dpkg -x $(DESTINATION) ./
 	rm -rf AppDir/opt
