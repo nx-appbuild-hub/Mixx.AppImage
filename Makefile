@@ -44,6 +44,9 @@ all:
 	wget --continue https://rpmfind.net/linux/centos/8.1.1911/BaseOS/x86_64/os/Packages/glibc-2.28-72.el8_1.1.x86_64.rpm
 	rpm2cpio glibc-2.28-72.el8_1.1.x86_64.rpm | cpio -idmv	
 	
+	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/p/portaudio-19-16.el7.x86_64.rpm
+	rpm2cpio portaudio-19-16.el7.x86_64.rpm | cpio -idmv	
+	
 	dpkg -x $(DESTINATION) ./
 	rm -rf AppDir/opt
 	
