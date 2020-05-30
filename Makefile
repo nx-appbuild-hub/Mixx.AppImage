@@ -32,6 +32,8 @@ all:
 	rpm2cpio libmodplug-0.8.9.0-9.el7.x86_64.rpm | cpio -idmv
 
 
+	wget --continue https://rpmfind.net/linux/epel/8/Everything/x86_64/Packages/l/libchromaprint-1.4.2-6.el8.x86_64.rpm
+	rpm2cpio libchromaprint-1.4.2-6.el8.x86_64.rpm | cpio -idmv
 	
 	
 	dpkg -x $(DESTINATION) ./
