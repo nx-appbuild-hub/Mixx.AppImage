@@ -47,8 +47,8 @@ all:
 	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/p/portaudio-19-16.el7.x86_64.rpm
 	rpm2cpio portaudio-19-16.el7.x86_64.rpm | cpio -idmv	
 	
-	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/serd-0.30.0-2.fc30.x86_64.rpm
-	rpm2cpio serd-0.30.0-2.fc30.x86_64.rpm | cpio -idmv	
+	wget --continue https://rpmfind.net/linux/mageia/distrib/7/x86_64/media/core/release/lib64serd0_0-0.30.0-1.mga7.x86_64.rpm
+	rpm2cpio lib64serd0_0-0.30.0-1.mga7.x86_64.rpm | cpio -idmv	
 	
 	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sord-0.16.2-3.fc30.x86_64.rpm
 	rpm2cpio sord-0.16.2-3.fc30.x86_64.rpm | cpio -idmv	
