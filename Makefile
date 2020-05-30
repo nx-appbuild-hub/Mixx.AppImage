@@ -53,6 +53,9 @@ all:
 	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sord-0.16.2-3.fc30.x86_64.rpm
 	rpm2cpio sord-0.16.2-3.fc30.x86_64.rpm | cpio -idmv	
 	
+	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sratom-0.6.2-3.fc30.x86_64.rpm
+	rpm2cpio sratom-0.6.2-3.fc30.x86_64.rpm | cpio -idmv	
+	
 	dpkg -x $(DESTINATION) ./
 	rm -rf AppDir/opt
 	
