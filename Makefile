@@ -47,6 +47,9 @@ all:
 	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/p/portaudio-19-16.el7.x86_64.rpm
 	rpm2cpio portaudio-19-16.el7.x86_64.rpm | cpio -idmv	
 	
+	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/serd-0.30.0-2.fc30.x86_64.rpm
+	rpm2cpio serd-0.30.0-2.fc30.x86_64.rpm | cpio -idmv	
+	
 	dpkg -x $(DESTINATION) ./
 	rm -rf AppDir/opt
 	
