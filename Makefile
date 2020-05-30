@@ -50,6 +50,9 @@ all:
 	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/serd-0.30.0-2.fc30.x86_64.rpm
 	rpm2cpio serd-0.30.0-2.fc30.x86_64.rpm | cpio -idmv	
 	
+	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sord-0.16.2-3.fc30.x86_64.rpm
+	rpm2cpio sord-0.16.2-3.fc30.x86_64.rpm | cpio -idmv	
+	
 	dpkg -x $(DESTINATION) ./
 	rm -rf AppDir/opt
 	
