@@ -28,8 +28,8 @@ all:
 	wget --continue http://repo.okay.com.mx/centos/6/x86_64/release/opusfile-0.5-1.el6.x86_64.rpm
 	rpm2cpio opusfile-0.5-1.el6.x86_64.rpm | cpio -idmv
 	
-	wget --continue https://ftp.lysator.liu.se/pub/opensuse/repositories/multimedia:/libs/openSUSE_Leap_15.1/x86_64/libmodplug1-0.4.12-lp151.59.1.x86_64.rpm
-	rpm2cpio libmodplug1-0.4.12-lp151.59.1.x86_64.rpm | cpio -idmv
+	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/l/libmodplug-0.8.9.0-9.el7.x86_64.rpm
+	rpm2cpio libmodplug-0.8.9.0-9.el7.x86_64.rpm | cpio -idmv
 
 
 	
