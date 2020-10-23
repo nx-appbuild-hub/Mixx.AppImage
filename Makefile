@@ -44,7 +44,7 @@ all:
 	wget --output-document=build.rpm https://rpmfind.net/linux/mageia/distrib/7/x86_64/media/core/release/lib64serd0_0-0.30.0-1.mga7.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
-	wget --output-document=build.rpm https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sord-0.16.2-3.fc30.x86_64.rpm
+	wget --output-document=build.rpm https://pkgs.dyn.su/el8/multimedia/x86_64/sord-0.16.4-3.el8.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
 	wget --output-document=build.rpm https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sratom-0.6.2-3.fc30.x86_64.rpm
