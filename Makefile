@@ -57,11 +57,11 @@ all:
 	mkdir --parents AppDir/lib
 	mkdir --parents AppDir/share
 	
-	cp -r lib64/* AppDir/lib	
+	cp -r lib64/* AppDir/lib | true
 	cp -r usr/lib/mixxx/* AppDir/lib
 	cp -r usr/lib/x86_64-linux-gnu/* AppDir/lib
-	cp -r usr/lib64/* AppDir/lib
-	cp -r usr/lib/* AppDir/lib	
+	cp -r usr/lib64/* AppDir/lib | true
+	cp -r usr/lib/* AppDir/lib | true
 	cp -r usr/share/* AppDir/share
 	cp -r usr/bin/* AppDir/mixxx
 
