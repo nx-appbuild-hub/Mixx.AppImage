@@ -47,7 +47,7 @@ all:
 	wget --output-document=build.rpm https://pkgs.dyn.su/el8/multimedia/x86_64/sord-0.16.4-3.el8.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
-	wget --output-document=build.rpm https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/s/sratom-0.6.2-3.fc30.x86_64.rpm
+	wget --output-document=build.rpm https://pkgs.dyn.su/el8/multimedia/x86_64/sratom-0.6.4-2.el8.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
 	dpkg -x $(DESTINATION) ./
