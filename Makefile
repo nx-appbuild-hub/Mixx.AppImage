@@ -37,10 +37,7 @@ all:
 	
 	wget --output-document=build.rpm https://download-ib01.fedoraproject.org/pub/fedora/linux/updates/testing/33/Everything/x86_64/Packages/l/lilv-0.24.10-1.fc33.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv	
-	
-	wget --output-document=build.rpm https://rpmfind.net/linux/centos/8.1.1911/BaseOS/x86_64/os/Packages/glibc-2.28-72.el8_1.1.x86_64.rpm
-	rpm2cpio build.rpm | cpio -idmv
-	
+		
 	wget --output-document=build.rpm https://rpmfind.net/linux/epel/7/x86_64/Packages/p/portaudio-19-16.el7.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
