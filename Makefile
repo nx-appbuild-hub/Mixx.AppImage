@@ -38,7 +38,7 @@ all:
 	wget --continue https://rpmfind.net/linux/epel/7/x86_64/Packages/r/rubberband-1.8.1-8.el7.x86_64.rpm
 	rpm2cpio rubberband-1.8.1-8.el7.x86_64.rpm | cpio -idmv	
 	
-	wget --continue https://rpmfind.net/linux/fedora/linux/releases/30/Everything/x86_64/os/Packages/l/lilv-0.24.4-5.fc30.x86_64.rpm
+	wget --continue https://download-ib01.fedoraproject.org/pub/fedora/linux/updates/testing/33/Everything/x86_64/Packages/l/lilv-0.24.10-1.fc33.x86_64.rpm
 	rpm2cpio lilv-0.24.4-5.fc30.x86_64.rpm | cpio -idmv	
 	
 	wget --continue https://rpmfind.net/linux/centos/8.1.1911/BaseOS/x86_64/os/Packages/glibc-2.28-72.el8_1.1.x86_64.rpm
