@@ -14,7 +14,7 @@ all:
 	wget --output-document=build.rpm http://rpmfind.net/linux/epel/6/x86_64/Packages/p/portmidi-217-3.el6.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
 	
-	wget --output-document=build.rpm http://ftp.br.debian.org/debian/pool/main/p/protobuf/libprotobuf-lite10_3.0.0-9_amd64.deb
+	wget --output-document=build.rpm http://mirror.centos.org/centos/8/AppStream/x86_64/os/Packages/protobuf-lite-3.5.0-7.el8.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv	
 	
 	wget --output-document=build.rpm http://mirror.centos.org/centos/6/os/x86_64/Packages/libid3tag-0.15.1b-11.el6.x86_64.rpm
