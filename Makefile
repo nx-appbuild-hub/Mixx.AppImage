@@ -10,11 +10,8 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 PWD:=$(shell pwd)
-DESTINATION="build.deb"
-OUTPUT="Mixxx.AppImage"
 
-
-all:
+all: clean
 	mkdir --parents $(PWD)/build/Boilerplate.AppDir
 	apprepo --destination=$(PWD)/build appdir boilerplate libportaudio2 libportmidi0 libprotobuf-lite17 \
 										libqt5x11extras5 libqt5opengl5 libqt5script5 libqt5svg5 libqt5gui5 libqt5scripttools5 libqt5sql5 libqt5xml5 libqt5concurrent5  \
@@ -34,9 +31,18 @@ all:
 	cp -r --force $(PWD)/build/usr/lib/* 	$(PWD)/build/Boilerplate.AppDir/lib64 		| true	
 	cp -r --force $(PWD)/build/usr/lib64/* 	$(PWD)/build/Boilerplate.AppDir/lib64 		| true
 	cp -r --force $(PWD)/build/usr/share/* 	$(PWD)/build/Boilerplate.AppDir/share		| true
-							
-	export ARCH=x86_64 && bin/appimagetool.AppImage $(PWD)/build/AppDir $(OUTPUT)
-	chmod +x $(OUTPUT)
+
+	rm --force $(PWD)/build/Boilerplate.AppDir/*.desktop		| true
+	rm --force $(PWD)/build/Boilerplate.AppDir/*.svg			| true
+	rm --force $(PWD)/build/Boilerplate.AppDir/*.png			| true
+
+
+	cp -r --force $(PWD)/AppDir/*.desktop	$(PWD)/build/Boilerplate.AppDir/	| true
+	cp -r --force $(PWD)/AppDir/*.svg		$(PWD)/build/Boilerplate.AppDir/ 	| true
+	cp -r --force $(PWD)/AppDir/*.png		$(PWD)/build/Boilerplate.AppDir/ 	| true
+
+	export ARCH=x86_64 && bin/appimagetool.AppImage $(PWD)/build/Boilerplate.AppDir $(PWD)/Mixxx.AppImage
+	chmod +x $(PWD)/Mixxx.AppImage
 
 clean:
 	rm -rf $(PWD)/build
